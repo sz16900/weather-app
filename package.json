@@ -4,6 +4,10 @@
   "description": "A Weather App project that comes at the end of the Asynchronous Javascript and APIs section of the Javascript course",
   "main": "index.js",
   "scripts": {
+    "start:dev": "webpack-dev-server",
+    "dev": "webpack --mode development",
+    "start": "webpack-dev-server --mode development --open",
+    "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
