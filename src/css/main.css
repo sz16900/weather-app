@@ -1,0 +1,4 @@
+.cardContainer {
+  display: flex;
+  border: solid 1px black;
+}
