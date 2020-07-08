@@ -1,4 +1,15 @@
-.cardContainer {
-  display: flex;
+.card {
+  /* display: flex; */
   border: solid 1px black;
+  width: 25em;
+  margin: 0 auto;
+}
+
+.card-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+#icon {
+  height: 4em;
 }

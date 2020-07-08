@@ -1,14 +1,12 @@
 // Use this for images
 // http://openweathermap.org/img/wn/02n@2x.png
-
-import cardContainer from './cardContainer';
-
-async function getWeatherData() {
-  const gatheredData = {};
+const getWeatherData = async () => {
   const response = await fetch(
     'http://api.openweathermap.org/data/2.5/weather?q=quito&units=imperial&APPID=89aa0327608e9bae4e9fcb1f777577f9',
     { mode: 'cors' }
   );
+
+  const gatheredData = {};
   const weatherData = await response.json();
 
   //   city & country
@@ -36,8 +34,7 @@ async function getWeatherData() {
   date = new Date(sec * 1000);
   timestr = date.toLocaleTimeString();
   gatheredData.sunset = timestr;
-
-  cardContainer(gatheredData);
-}
+  return gatheredData;
+};
 
 export default getWeatherData;

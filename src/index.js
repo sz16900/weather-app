@@ -1,5 +1,7 @@
 import './css/main.css';
 
-import getWeatherData from './getWeatherData';
+import cardContainer from './cardContainer';
+import renderData from './renderData';
 
-getWeatherData();
+cardContainer();
+renderData();
