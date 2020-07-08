@@ -32,3 +32,19 @@
 #card-time {
   margin: 0;
 }
+
+#desc-hum-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#sunrise-container,
+#sunset-container {
+  display: flex;
+}
+
+#sunrise-time,
+#sunset-time {
+  margin: 0;
+  padding-left: 1em;
+}

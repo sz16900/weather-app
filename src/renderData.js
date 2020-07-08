@@ -13,6 +13,12 @@ const renderData = () => {
     time.textContent = data.current_time;
     const description = document.getElementById('description');
     description.textContent = data.description;
+    const humidity = document.getElementById('humidity');
+    humidity.textContent = `Humidity: ${data.humidity}%`;
+    const sunrise = document.getElementById('sunrise-time');
+    sunrise.textContent = data.sunrise;
+    const sunset = document.getElementById('sunset-time');
+    sunset.textContent = data.sunset;
   });
 };
 
