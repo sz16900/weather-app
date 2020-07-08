@@ -2,12 +2,13 @@
 // http://openweathermap.org/img/wn/02n@2x.png
 const getWeatherData = async () => {
   const response = await fetch(
-    'http://api.openweathermap.org/data/2.5/weather?q=manta&units=imperial&APPID=89aa0327608e9bae4e9fcb1f777577f9',
+    'http://api.openweathermap.org/data/2.5/weather?q=lagos&units=imperial&APPID=89aa0327608e9bae4e9fcb1f777577f9',
     { mode: 'cors' }
   );
 
   const gatheredData = {};
   const weatherData = await response.json();
+  console.log(weatherData);
 
   //   city & country
   gatheredData.city = weatherData.name;

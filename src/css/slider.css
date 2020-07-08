@@ -1,6 +1,12 @@
 /* Credit: https://stackoverflow.com/questions/39846282/how-to-add-the-text-on-and-off-to-toggle-button */
 
 /* Slider */
+.slider-container {
+  width: 10%;
+  margin: 0 auto;
+  margin-top: 1em;
+}
+
 .switch {
   position: relative;
   display: inline-block;
