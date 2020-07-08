@@ -11,7 +11,7 @@
 .card {
   /* display: flex; */
   border: solid 1px black;
-  width: 25em;
+  width: 50%;
   margin: 0 auto;
 }
 
@@ -33,9 +33,14 @@
   margin: 0;
 }
 
-#desc-hum-container {
+#desc-hum-container,
+#sun-container {
   display: flex;
   justify-content: space-between;
+}
+
+#sun-container * {
+  font-size: 1.1em;
 }
 
 #sunrise-container,

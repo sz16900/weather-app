@@ -29,6 +29,9 @@ const cardContainer = () => {
   descHum.appendChild(humidity);
 
   // Sunrise + Sunset
+  const sunContainer = document.createElement('div');
+  sunContainer.setAttribute('id', 'sun-container');
+
   const sunriseContainer = document.createElement('div');
   sunriseContainer.setAttribute('id', 'sunrise-container');
   const sunr = document.createElement('i');
@@ -43,6 +46,7 @@ const cardContainer = () => {
   sunriseContainer.appendChild(sunr);
   sunriseContainer.appendChild(up);
   sunriseContainer.appendChild(sunrise);
+  sunContainer.appendChild(sunriseContainer);
 
   const sunsetContainer = document.createElement('div');
   sunsetContainer.setAttribute('id', 'sunset-container');
@@ -58,6 +62,7 @@ const cardContainer = () => {
   sunsetContainer.appendChild(sund);
   sunsetContainer.appendChild(down);
   sunsetContainer.appendChild(sunset);
+  sunContainer.appendChild(sunsetContainer);
 
   cardTitle.appendChild(city);
   cardTitle.appendChild(temperature);
@@ -65,8 +70,7 @@ const cardContainer = () => {
   cardContainer.appendChild(cardTitle);
   cardContainer.appendChild(cardTime);
   cardContainer.appendChild(descHum);
-  cardContainer.appendChild(sunriseContainer);
-  cardContainer.appendChild(sunsetContainer);
+  cardContainer.appendChild(sunContainer);
 
   main.appendChild(cardContainer);
 };
