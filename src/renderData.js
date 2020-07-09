@@ -7,6 +7,7 @@ const renderData = (info) => {
       h1.textContent = `${data.city}, ${data.country}`;
       const temperature = document.getElementById('temperature');
       temperature.textContent = `${Math.floor(data.temperature)}°`;
+      temperature.value = data.temperature;
       const span = document.getElementById('icon');
       span.src = `http://openweathermap.org/img/wn/${data.icon}@2x.png`;
       const time = document.getElementById('card-time');
@@ -17,8 +18,10 @@ const renderData = (info) => {
       humidity.textContent = ` ${data.humidity}%`;
       const high = document.getElementById('high-temp');
       high.textContent = `${Math.floor(data.highTemp)}°`;
-      const sunset = document.getElementById('low-temp');
-      sunset.textContent = `${Math.floor(data.lowTemp)}°`;
+      high.value = Math.floor(data.highTemp);
+      const low = document.getElementById('low-temp');
+      low.textContent = `${Math.floor(data.lowTemp)}°`;
+      low.value = Math.floor(data.lowTemp);
     })
     .catch((e) => console.log(e));
 };
