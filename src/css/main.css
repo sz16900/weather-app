@@ -1,3 +1,19 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Trick */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}
+
 #search-bar {
   margin: 0 auto;
   width: 50%;
@@ -74,4 +90,16 @@
 
 .fa-tint:before {
   color: #6cc3d5;
+}
+
+.footer-wrapper {
+  height: 1.5em;
+  padding: 32px 65px 42px;
+  background-color: #222;
+}
+
+.footer-p {
+  text-align: center;
+  font-family: 'Varela Round', sans-serif;
+  color: #999;
 }
