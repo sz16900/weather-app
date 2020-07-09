@@ -1,8 +1,8 @@
 // Use this for images
 // http://openweathermap.org/img/wn/02n@2x.png
-const getWeatherData = async () => {
+const getWeatherData = async (info) => {
   const response = await fetch(
-    'http://api.openweathermap.org/data/2.5/weather?q=lagos&units=imperial&APPID=89aa0327608e9bae4e9fcb1f777577f9',
+    `http://api.openweathermap.org/data/2.5/weather?q=${info}&units=imperial&APPID=89aa0327608e9bae4e9fcb1f777577f9`,
     { mode: 'cors' }
   );
 

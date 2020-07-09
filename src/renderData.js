@@ -1,7 +1,7 @@
 import getWeatherData from './getWeatherData';
 
-const renderData = () => {
-  getWeatherData().then((data) => {
+const renderData = (info) => {
+  getWeatherData(info).then((data) => {
     console.log(data);
     const h1 = document.getElementById('city-country');
     h1.textContent = `${data.city}, ${data.country}`;
