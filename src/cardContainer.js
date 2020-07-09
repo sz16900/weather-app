@@ -9,7 +9,7 @@ const cardContainer = () => {
   cardTitle.classList.add('card-title');
   const city = document.createElement('h1');
   city.setAttribute('id', 'city-country');
-  const temperature = document.createElement('h2');
+  const temperature = document.createElement('h1');
   temperature.setAttribute('id', 'temperature');
   const span = document.createElement('img');
   span.setAttribute('id', 'icon');
