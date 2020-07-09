@@ -6,6 +6,7 @@ const renderSlider = () => {
   label.classList.add('switch');
   const input = document.createElement('input');
   input.setAttribute('type', 'checkbox');
+  input.setAttribute('id', 'input-bar');
   input.value = 0;
   input.addEventListener('click', () => {
     const mainTemp = document.getElementById('temperature');

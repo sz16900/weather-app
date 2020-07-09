@@ -5,9 +5,7 @@ const renderData = (info) => {
     .then((data) => {
       const h1 = document.getElementById('city-country');
       h1.textContent = `${data.city}, ${data.country}`;
-      const temperature = document.getElementById('temperature');
-      temperature.textContent = `| ${Math.floor(data.temperature)}°`;
-      temperature.value = data.temperature;
+
       const span = document.getElementById('icon');
       span.src = `http://openweathermap.org/img/wn/${data.icon}@2x.png`;
       const time = document.getElementById('card-time');
@@ -16,12 +14,25 @@ const renderData = (info) => {
       description.textContent = data.description;
       const humidity = document.getElementById('humidity');
       humidity.textContent = ` ${data.humidity}%`;
+
+      const temperature = document.getElementById('temperature');
       const high = document.getElementById('high-temp');
-      high.textContent = `${Math.floor(data.highTemp)}°`;
-      high.value = Math.floor(data.highTemp);
       const low = document.getElementById('low-temp');
-      low.textContent = `${Math.floor(data.lowTemp)}°`;
-      low.value = Math.floor(data.lowTemp);
+      const input = document.getElementById('input-bar');
+      if (input.value === '0') {
+        temperature.textContent = `| ${Math.floor(data.temperature)}°`;
+        temperature.value = data.temperature;
+        high.textContent = `${Math.floor(data.highTemp)}°`;
+        high.value = Math.floor(data.highTemp);
+        low.textContent = `${Math.floor(data.lowTemp)}°`;
+        low.value = Math.floor(data.lowTemp);
+      } else {
+        temperature.textContent = `| ${Math.floor(
+          (data.temperature - 32) / 1.8
+        )}°`;
+        high.textContent = `${Math.floor((data.highTemp - 32) / 1.8)}°`;
+        low.textContent = `${Math.floor((data.lowTemp - 32) / 1.8)}°`;
+      }
     })
     .catch((e) => console.log(e));
 };
