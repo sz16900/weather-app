@@ -48,8 +48,8 @@
   display: flex;
 }
 
-#sunrise-time,
-#sunset-time {
+#high-temp,
+#low-temp {
   margin: 0;
   padding-left: 1em;
 }

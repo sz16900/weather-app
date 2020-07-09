@@ -14,11 +14,11 @@ const renderData = (info) => {
       const description = document.getElementById('description');
       description.textContent = data.description;
       const humidity = document.getElementById('humidity');
-      humidity.textContent = `Humidity: ${data.humidity}%`;
-      const sunrise = document.getElementById('sunrise-time');
-      sunrise.textContent = data.sunrise;
-      const sunset = document.getElementById('sunset-time');
-      sunset.textContent = data.sunset;
+      humidity.textContent = ` ${data.humidity}%`;
+      const high = document.getElementById('high-temp');
+      high.textContent = `${Math.floor(data.highTemp)}°`;
+      const sunset = document.getElementById('low-temp');
+      sunset.textContent = `${Math.floor(data.lowTemp)}°`;
     })
     .catch((e) => console.log(e));
 };

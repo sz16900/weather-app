@@ -23,8 +23,10 @@ const cardContainer = () => {
   descHum.setAttribute('id', 'desc-hum-container');
   const description = document.createElement('h2');
   description.setAttribute('id', 'description');
-  const humidity = document.createElement('h2');
+  const humidity = document.createElement('i');
   humidity.setAttribute('id', 'humidity');
+  humidity.setAttribute('aria-hidden', 'true');
+  humidity.classList.add('fa', 'fa-tint');
   descHum.appendChild(description);
   descHum.appendChild(humidity);
 
@@ -34,16 +36,11 @@ const cardContainer = () => {
 
   const sunriseContainer = document.createElement('div');
   sunriseContainer.setAttribute('id', 'sunrise-container');
-  const sunr = document.createElement('i');
-  sunr.setAttribute('id', 'sunrise');
-  sunr.classList.add('fa', 'fa-sun-o');
-  sunr.setAttribute('aria-hidden', 'true');
   const up = document.createElement('i');
   up.classList.add('fa', 'fa-arrow-up');
   up.setAttribute('aria-hidden', 'true');
   const sunrise = document.createElement('h4');
-  sunrise.setAttribute('id', 'sunrise-time');
-  sunriseContainer.appendChild(sunr);
+  sunrise.setAttribute('id', 'high-temp');
   sunriseContainer.appendChild(up);
   sunriseContainer.appendChild(sunrise);
   sunContainer.appendChild(sunriseContainer);
@@ -54,12 +51,7 @@ const cardContainer = () => {
   down.classList.add('fa', 'fa-arrow-down');
   down.setAttribute('aria-hidden', 'true');
   const sunset = document.createElement('h4');
-  sunset.setAttribute('id', 'sunset-time');
-  const sund = document.createElement('i');
-  sund.setAttribute('id', 'sunset');
-  sund.classList.add('fa', 'fa-sun-o');
-  sund.setAttribute('aria-hidden', 'true');
-  sunsetContainer.appendChild(sund);
+  sunset.setAttribute('id', 'low-temp');
   sunsetContainer.appendChild(down);
   sunsetContainer.appendChild(sunset);
   sunContainer.appendChild(sunsetContainer);
