@@ -17,9 +17,9 @@ const renderSlider = () => {
       lowTemp.textContent = `${Math.floor((lowTemp.value - 32) / 1.8)}°`;
       input.value = '1';
     } else {
-      mainTemp.textContent = `${mainTemp.value}°`;
-      highTemp.textContent = `${highTemp.value}°`;
-      lowTemp.textContent = `${lowTemp.value}°`;
+      mainTemp.textContent = `${Math.floor(mainTemp.value)}°`;
+      highTemp.textContent = `${Math.floor(highTemp.value)}°`;
+      lowTemp.textContent = `${Math.floor(lowTemp.value)}°`;
       input.value = '0';
     }
   });

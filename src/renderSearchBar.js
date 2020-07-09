@@ -7,6 +7,8 @@ const renderSearch = () => {
   input.setAttribute('type', 'text');
   input.setAttribute('id', 'fname');
   input.setAttribute('name', 'fname');
+  input.setAttribute('onkeydown', "return event.key != 'Enter'");
+
   const button = document.createElement('input');
   button.setAttribute('type', 'button');
   button.setAttribute('value', 'Submit');
