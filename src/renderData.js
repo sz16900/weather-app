@@ -3,35 +3,44 @@ import getWeatherData from './getWeatherData';
 const renderData = (info) => {
   getWeatherData(info)
     .then((data) => {
+      const {
+        currentTime,
+        description,
+        humidity,
+        temperature,
+        highTemp,
+        lowTemp,
+        icon,
+        city,
+        country,
+      } = data;
       const h1 = document.getElementById('city-country');
-      h1.textContent = `${data.city}, ${data.country}`;
+      h1.textContent = `${city}, ${country}`;
 
       const span = document.getElementById('icon');
-      span.src = `http://openweathermap.org/img/wn/${data.icon}@2x.png`;
+      span.src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
       const time = document.getElementById('card-time');
-      time.textContent = data.current_time;
-      const description = document.getElementById('description');
-      description.textContent = data.description;
-      const humidity = document.getElementById('humidity');
-      humidity.textContent = ` ${data.humidity}%`;
+      time.textContent = currentTime;
+      const descript = document.getElementById('description');
+      descript.textContent = description;
+      const hum = document.getElementById('humidity');
+      hum.textContent = ` ${humidity}%`;
 
-      const temperature = document.getElementById('temperature');
+      const temp = document.getElementById('temperature');
       const high = document.getElementById('high-temp');
       const low = document.getElementById('low-temp');
       const input = document.getElementById('input-bar');
       if (input.value === '0') {
-        temperature.textContent = `| ${Math.floor(data.temperature)}°`;
-        temperature.value = data.temperature;
-        high.textContent = `${Math.floor(data.highTemp)}°`;
-        high.value = Math.floor(data.highTemp);
-        low.textContent = `${Math.floor(data.lowTemp)}°`;
-        low.value = Math.floor(data.lowTemp);
+        temp.textContent = `| ${Math.floor(temperature)}°`;
+        temp.value = temperature;
+        high.textContent = `${Math.floor(highTemp)}°`;
+        high.value = Math.floor(highTemp);
+        low.textContent = `${Math.floor(lowTemp)}°`;
+        low.value = Math.floor(lowTemp);
       } else {
-        temperature.textContent = `| ${Math.floor(
-          (data.temperature - 32) / 1.8,
-        )}°`;
-        high.textContent = `${Math.floor((data.highTemp - 32) / 1.8)}°`;
-        low.textContent = `${Math.floor((data.lowTemp - 32) / 1.8)}°`;
+        temp.textContent = `| ${Math.floor((temperature - 32) / 1.8)}°`;
+        high.textContent = `${Math.floor((highTemp - 32) / 1.8)}°`;
+        low.textContent = `${Math.floor((lowTemp - 32) / 1.8)}°`;
       }
     })
     .catch((e) => {

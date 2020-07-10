@@ -21,7 +21,7 @@ const getWeatherData = async (info) => {
       new Date() - (-localTimeOffset - weatherData.timezone) * 1000,
     );
     const theTime = currentDate.toLocaleTimeString('en-GB').slice(0, -3);
-    gatheredData.current_time = theTime;
+    gatheredData.currentTime = theTime;
     //   main condition
     gatheredData.icon = weatherData.weather[0].icon;
     gatheredData.description = weatherData.weather[0].description;
