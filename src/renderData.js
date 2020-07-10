@@ -28,13 +28,16 @@ const renderData = (info) => {
         low.value = Math.floor(data.lowTemp);
       } else {
         temperature.textContent = `| ${Math.floor(
-          (data.temperature - 32) / 1.8
+          (data.temperature - 32) / 1.8,
         )}°`;
         high.textContent = `${Math.floor((data.highTemp - 32) / 1.8)}°`;
         low.textContent = `${Math.floor((data.lowTemp - 32) / 1.8)}°`;
       }
     })
-    .catch((e) => console.log(e));
+    .catch((e) => {
+      const input = document.getElementById('fname');
+      input.placeholder = e;
+    });
 };
 
 export default renderData;

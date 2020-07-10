@@ -19,15 +19,19 @@ footer {
   width: 50%;
 }
 
+.active-pink input.form-control[type='text'] {
+  box-shadow: 0 1px 0 0 #56cc9d;
+  border: none;
+}
+
 .active-pink-2 input.form-control[type='text']:focus:not([readonly]) {
   border-bottom: 1px solid #56cc9d;
   box-shadow: 0 1px 0 0 #56cc9d;
 }
 
-.active-pink input.form-control[type='text'] {
-  /* border-bottom: 1px solid #56CC9D; */
-  box-shadow: 0 1px 0 0 #56cc9d;
-  border: none;
+.active-pink-3 input.form-control[type='text']:focus:not([readonly]) {
+  border-bottom: 1px solid red;
+  box-shadow: 0 1px 0 0 red;
 }
 
 .card {
@@ -40,6 +44,7 @@ footer {
 
 .card-title {
   display: flex;
+
   /* justify-content: space-between; */
 }
 
@@ -88,7 +93,7 @@ footer {
   margin: 0 auto !important;
 }
 
-.fa-tint:before {
+.fa-tint::before {
   color: #6cc3d5;
 }
 
