@@ -7,6 +7,6 @@ import renderSlider from './renderSlider';
 import renderSearch from './renderSearchBar';
 
 cardContainer();
-renderData('quito');
+renderData('london');
 renderSlider();
 renderSearch();

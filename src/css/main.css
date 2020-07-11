@@ -1,23 +1,51 @@
-/* RESET */
-
-/* * {
-  padding: 0;
+html,
+body {
+  height: 100%;
   margin: 0;
-  box-sizing: border-box;
-  font-size: 16px;
-  font-family: 'Ropa Sans', sans-serif;
-} */
+}
+
+/* Trick */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}
+
+#search-bar {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.active-pink input.form-control[type='text'] {
+  box-shadow: 0 1px 0 0 #56cc9d;
+  border: none;
+}
+
+.active-pink-2 input.form-control[type='text']:focus:not([readonly]) {
+  border-bottom: 1px solid #56cc9d;
+  box-shadow: 0 1px 0 0 #56cc9d;
+}
+
+.active-pink-3 input.form-control[type='text']:focus:not([readonly]) {
+  border-bottom: 1px solid red;
+  box-shadow: 0 1px 0 0 red;
+}
 
 .card {
   /* display: flex; */
-  border: solid 1px black;
   width: 50%;
   margin: 0 auto;
+  padding: 2em;
+  margin-top: 2em;
 }
 
 .card-title {
   display: flex;
-  justify-content: space-between;
+
+  /* justify-content: space-between; */
 }
 
 #city-country,
@@ -27,6 +55,7 @@
 
 #icon {
   height: 4em;
+  margin-left: auto;
 }
 
 #card-time {
@@ -37,6 +66,7 @@
 #sun-container {
   display: flex;
   justify-content: space-between;
+  padding-top: 1em;
 }
 
 #sun-container * {
@@ -46,10 +76,35 @@
 #sunrise-container,
 #sunset-container {
   display: flex;
+  font-size: 2em;
 }
 
 #high-temp,
 #low-temp {
   margin: 0;
-  padding-left: 1em;
+  padding-left: 0.1em;
+}
+
+#humidity {
+  font-size: 2em;
+}
+
+#submit-btn {
+  margin: 0 auto !important;
+}
+
+.fa-tint::before {
+  color: #6cc3d5;
+}
+
+.footer-wrapper {
+  height: 1.5em;
+  padding: 32px 65px 42px;
+  background-color: #222;
+}
+
+.footer-p {
+  text-align: center;
+  font-family: 'Varela Round', sans-serif;
+  color: #999;
 }
