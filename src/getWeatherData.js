@@ -1,7 +1,7 @@
 const getWeatherData = async (info) => {
   const response = await fetch(
-    `http://api.openweathermap.org/data/2.5/weather?q=${info}&units=imperial&APPID=89aa0327608e9bae4e9fcb1f777577f9`,
-    { mode: 'cors' },
+    `https://api.openweathermap.org/data/2.5/weather?q=${info}&units=imperial&APPID=89aa0327608e9bae4e9fcb1f777577f9`,
+    { mode: 'cors' }
   );
 
   if (!response.ok) {
@@ -18,7 +18,7 @@ const getWeatherData = async (info) => {
     //   current time
     const localTimeOffset = new Date().getTimezoneOffset() * 60;
     const currentDate = new Date(
-      new Date() - (-localTimeOffset - weatherData.timezone) * 1000,
+      new Date() - (-localTimeOffset - weatherData.timezone) * 1000
     );
     const theTime = currentDate.toLocaleTimeString('en-GB').slice(0, -3);
     gatheredData.currentTime = theTime;
