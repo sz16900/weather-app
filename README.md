@@ -24,7 +24,6 @@ In this project, I am going to make a Javascript weather application to demonstr
 - CSS3
 - Font Awesome
 - Google Fonts
-- Fatkun
 - W3 Validators
 - Bootstrap
 - Bootswatch
