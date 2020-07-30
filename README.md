@@ -14,7 +14,9 @@ In this project, I am going to make a Javascript weather application to demonstr
 
 ## Live Demo
 
-[Live Demo Link](happy-goldstine-08e6f0.netlify.app)
+[Live Demo Link](https://stupefied-carson-320df8.netlify.app/)
+
+[This link works, I know it does beacuse I've tried it multiple times. Something is happening with netlify. I noticed my peers having issues too?]
 
 ---
 
